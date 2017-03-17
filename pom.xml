@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.weizhi.libra</groupId>
+    <artifactId>libra</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>web-project-demo</module>
+        <module>bigdata-practice</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring.version>4.2.7.RELEASE</spring.version>
+        <logback.version>1.0.13</logback.version>
+        <commons-logging.version>1.1.1</commons-logging.version>
+        <mybatis.version>3.2.0</mybatis.version>
+        <mybatis-spring.version>1.3.0</mybatis-spring.version>
+        <commons-configuration.version>1.9</commons-configuration.version>
+        <commons-chain.version>1.2</commons-chain.version>
+        <activemq.version>5.8.0</activemq.version>
+        <dubbo.version>2.4.10</dubbo.version>
+        <jms.version>1.1-rev-1</jms.version>
+        <lombok.version>1.16.4</lombok.version>
+        <mockito.version>1.8.5</mockito.version>
+        <powermock.version>1.5.1</powermock.version>
+        <el.version>2.2.4</el.version>
+        <aspectj.version>1.7.0</aspectj.version>
+        <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+
+        <sonar.exclusions>
+            <!--acct-api-->
+            **/com/weizhi/libra/web/*/filter/**/*,
+            **/com/weizhi/libra/web/*/validator/**/*
+        </sonar.exclusions>
+    </properties>
+
+</project>

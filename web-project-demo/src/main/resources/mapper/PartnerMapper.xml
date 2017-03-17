@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.weizhi.libra.web.dao.PartnerMapper">
+    <resultMap id="BaseResultMap" type="com.weizhi.libra.web.model.Partner">
+        <id column="FID" property="id" jdbcType="BIGINT"/>
+        <result column="FPRTN_CODE" property="prtnCode" jdbcType="VARCHAR"/>
+        <result column="FPRTN_ID" property="prtnId" jdbcType="BIGINT"/>
+        <result column="FPRTN_NAME" property="prtnName" jdbcType="VARCHAR"/>
+        <result column="FPRTN_AES_KEY" property="prtnAesKey" jdbcType="VARCHAR"/>
+        <result column="FPRTN_HASH_KEY" property="prtnHashKey" jdbcType="VARCHAR"/>
+        <result column="FMEMO" property="memo" jdbcType="VARCHAR"/>
+        <result column="FCREATE_TIME" property="createTime" jdbcType="TIMESTAMP"/>
+        <result column="FUPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP"/>
+        <result column="FOPERATOR" property="operator" jdbcType="VARCHAR"/>
+        <result column="FSTATUS" property="status" jdbcType="CHAR"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        FID, FPRTN_CODE, FPRTN_ID, FPRTN_NAME, FPRTN_AES_KEY, FPRTN_HASH_KEY, FMEMO, FCREATE_TIME,
+        FUPDATE_TIME, FOPERATOR, FSTATUS
+    </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long">
+        select
+        <include refid="Base_Column_List"/>
+        from T_CARINA_PARTNER
+        where FID = #{id,jdbcType=BIGINT}
+    </select>
+    <select id="selectByPrtnCode" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from T_CARINA_PARTNER
+        where FPRTN_CODE = #{prtnCode,jdbcType=VARCHAR}
+        AND FSTATUS = 'Y'
+    </select>
+
+    <select id="selectMinPrtnId" resultType="java.lang.Long">
+        select
+        MIN(FPRTN_ID)
+        from T_CARINA_PARTNER
+    </select>
+
+    <insert id="insert" parameterType="com.weizhi.libra.web.model.Partner">
+        insert into T_CARINA_PARTNER (FPRTN_CODE, FPRTN_ID,
+        FPRTN_NAME, FPRTN_AES_KEY, FPRTN_HASH_KEY,
+        FMEMO, FCREATE_TIME,
+        FOPERATOR)
+        values ( #{prtnCode,jdbcType=VARCHAR}, #{prtnId,jdbcType=BIGINT},
+        #{prtnName,jdbcType=VARCHAR}, #{prtnAesKey,jdbcType=VARCHAR}, #{prtnHashKey,jdbcType=VARCHAR},
+        #{memo,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP},
+        #{operator,jdbcType=VARCHAR})
+    </insert>
+
+    <update id="updateByPrimaryKeySelective" parameterType="com.weizhi.libra.web.model.Partner">
+        update T_CARINA_PARTNER
+        <set>
+            <if test="prtnCode != null">
+                FPRTN_CODE = #{prtnCode,jdbcType=VARCHAR},
+            </if>
+            <if test="prtnId != null">
+                FPRTN_ID = #{prtnId,jdbcType=BIGINT},
+            </if>
+            <if test="prtnName != null">
+                FPRTN_NAME = #{prtnName,jdbcType=VARCHAR},
+            </if>
+            <if test="prtnAesKey != null">
+                FPRTN_AES_KEY = #{prtnAesKey,jdbcType=VARCHAR},
+            </if>
+            <if test="prtnHashKey != null">
+                FPRTN_HASH_KEY = #{prtnHashKey,jdbcType=VARCHAR},
+            </if>
+            <if test="memo != null">
+                FMEMO = #{memo,jdbcType=VARCHAR},
+            </if>
+            <if test="createTime != null">
+                FCREATE_TIME = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="updateTime != null">
+                FUPDATE_TIME = #{updateTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operator != null">
+                FOPERATOR = #{operator,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where FID = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateStatusByPrtnCode" parameterType="com.weizhi.libra.web.model.Partner">
+        update T_CARINA_PARTNER
+        set FSTATUS = #{status,jdbcType=VARCHAR}
+        where FPRTN_CODE = #{prtnCode,jdbcType=VARCHAR} AND FPRTN_ID = #{prtnId,jdbcType=BIGINT}
+    </update>
+
+</mapper>
