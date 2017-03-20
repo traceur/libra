@@ -14,6 +14,7 @@
         <module>libra-web</module>
         <module>libra-bigdata</module>
         <module>libra-common</module>
+        <module>libra-pay</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
