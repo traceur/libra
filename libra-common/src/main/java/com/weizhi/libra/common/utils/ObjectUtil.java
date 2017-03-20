@@ -73,7 +73,6 @@ public class ObjectUtil {
 
     /**
      * @description 使用Pattern和Matcher类的方法
-     * @author yunyan
      * @param s
      * @return
      */

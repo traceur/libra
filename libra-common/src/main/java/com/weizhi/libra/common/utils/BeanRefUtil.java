@@ -13,7 +13,7 @@ import com.alibaba.fastjson.JSONObject;
 /**
  * java bean 反射的方法
  * 
- * @author Michael
+ * @author
  */
 public class BeanRefUtil {
 

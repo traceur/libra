@@ -15,7 +15,6 @@ public class CommandUtils {
 
     /**
      * @Description:执行linux命令，返回结果
-     * @author yunyan
      * @param host 主机
      * @param port 端口号
      * @param user 用户名

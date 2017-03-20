@@ -13,7 +13,7 @@ import org.slf4j.LoggerFactory;
 /**
  * date time util
  * 
- * @author shaoqian
+ * @author
  */
 public class DateUtil {
     private static final Logger LOG = LoggerFactory.getLogger(DateUtil.class);
@@ -210,7 +210,7 @@ public class DateUtil {
 
 
     /**
-     * @author: yunyan
+     * @author:
      * @description: 根据日期获取星期
      * @param date 日期
      * @param

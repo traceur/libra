@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * IPUitls
  * 
- * @author wanghuayao
+ * @author
  */
 public final class IPUitls {
 
