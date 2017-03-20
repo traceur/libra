@@ -9,9 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>web-project-demo</artifactId>
+    <artifactId>libra-web</artifactId>
+
     <version>1.0.0-RC01</version>
-    <name>web-demo</name>
+    <name>libra-web-demo</name>
     <packaging>war</packaging>
     <dependencies>
         <dependency>
@@ -92,14 +93,14 @@
 
         <!--&lt;!&ndash; 单元测试相关 &ndash;&gt;-->
         <!--<dependency>-->
-            <!--<groupId>org.testng</groupId>-->
-            <!--<artifactId>testng</artifactId>-->
-            <!--<scope>test</scope>-->
+        <!--<groupId>org.testng</groupId>-->
+        <!--<artifactId>testng</artifactId>-->
+        <!--<scope>test</scope>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>jtester</groupId>-->
-            <!--<artifactId>jtester</artifactId>-->
-            <!--<scope>test</scope>-->
+        <!--<groupId>jtester</groupId>-->
+        <!--<artifactId>jtester</artifactId>-->
+        <!--<scope>test</scope>-->
         <!--</dependency>-->
 
         <dependency>
@@ -168,7 +169,7 @@
             <artifactId>javamelody-core</artifactId>
             <version>1.47.0</version>
         </dependency>
-       <!---->
+        <!---->
 
 
         <dependency>
@@ -204,9 +205,9 @@
             <version>5.1.22</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.eclipse.jetty</groupId>-->
-            <!--<artifactId>jetty-servlets</artifactId>-->
-            <!--<version>8.1.9.v20130131</version>-->
+        <!--<groupId>org.eclipse.jetty</groupId>-->
+        <!--<artifactId>jetty-servlets</artifactId>-->
+        <!--<version>8.1.9.v20130131</version>-->
         <!--</dependency>-->
 
         <dependency>
@@ -333,5 +334,4 @@
             </build>
         </profile>
     </profiles>
-
 </project>

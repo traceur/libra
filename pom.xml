@@ -11,6 +11,8 @@
     <modules>
         <module>web-project-demo</module>
         <module>bigdata-practice</module>
+        <module>libra-web</module>
+        <module>libra-bigdata</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,23 +1,25 @@
-
 package com.weizhi.libra.web.service;
 
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+import com.weizhi.libra.web.dao.PartnerMapper;
+
 /**
  * @author weizhi
- * @version Id: TradeBaseAblitityService.java, v 0.1 2016/8/16 10:19 weizhi
- *          Exp $$
+ * @version Id: TradeBaseAblitityService.java, v 0.1 2016/8/16 10:19 weizhi Exp
+ *          $$
  * @Description TODO
  */
 @Service
 public class BaseService {
     private static final String OPEN_ON = "on";
 
-
     @Resource
-    //    private PartnerMapper           partnerMapper;
+    private PartnerMapper       partnerMapper;
+
+
     /**
      * 加密数据
      * 

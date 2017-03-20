@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx" xmlns:kiev="http://www.meizu.com/kiev/schema/service"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+	http://www.meizu.com/kiev/schema/service http://www.meizu.com/kiev/schema/service.xsd">
+    <import resource="classpath:spring/trade-rest.xml"/>
+    <import resource="classpath:spring/trade-datasource.xml"/>
+    <import resource="classpath:spring/trade-monitoring.xml"/>
+    <import resource="classpath:net/bull/javamelody/monitoring-spring.xml"/>
+
+    <bean id="localValidatorFactoryBean"
+          class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="providerClass" value="org.hibernate.validator.HibernateValidator"/>
+    </bean>
+
+    <bean id="monitoringAdvisor" class="net.bull.javamelody.MonitoringSpringAdvisor">
+        <property name="pointcut">
+            <bean class="net.bull.javamelody.MonitoredWithAnnotationPointcut"/>
+        </property>
+    </bean>
+    <!-- 声明使用注解式事务-->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+</beans>
