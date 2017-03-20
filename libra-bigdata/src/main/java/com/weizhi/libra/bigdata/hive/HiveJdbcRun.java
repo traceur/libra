@@ -1,11 +1,10 @@
-
 package com.weizhi.libra.bigdata.hive;
 
 import java.sql.*;
 
 /**
- * @author weizhi
- * @version Id: HiveJdbcRun.java, v 0.1 2017/3/20 10:02 weizhi Exp $$
+ * @author Linchong
+ * @version Id: HiveJdbcRun.java, v 0.1 2017/3/20 10:02 Linchong Exp $$
  * @Description TODO
  */
 public class HiveJdbcRun {
@@ -15,15 +14,14 @@ public class HiveJdbcRun {
             Class.forName("org.apache.hive.jdbc.HiveDriver");
             //jdbc:hive2://172.16.10.254:10001/default
             //jdbc:hive2://10.3.149.15:10000/default
-            Connection conn = DriverManager.getConnection("jdbc:hive2://10.3.149.19:10000/default",
+            Connection conn = DriverManager.getConnection("jdbc:hive2://10.3.149.18:10000/default",
                     "hive", "hive");
             Statement stmt = conn.createStatement();
             //            showtables(stmt);
             System.out.println("=============data=================");
-            //            ResultSet rs = stmt.executeQuery("select * from ad_recommend.bdl_fdt_t_charge_order where stat_date=20170315 and CONCAT(substring(fupdate_time,1,4),substring(fupdate_time,6,2),substring(fupdate_time,9,2)) = 20170301");;
-            ResultSet rs = stmt
-                    .executeQuery("select * from ad_recommend.bdl_fdt_t_charge_order where stat_date=20170315 and CONCAT(substring(fupdate_time,1,4),substring(fupdate_time,6,2),substring(fupdate_time,9,2)) = 20170301 limit 5");
+            ResultSet rs = stmt.executeQuery("select * from test limit 1 ");
             ;
+
             ResultSetMetaData meta = rs.getMetaData();
             for (int i = 0; i < meta.getColumnCount(); i++) {
                 //                System.out.println(meta);
