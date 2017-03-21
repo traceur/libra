@@ -336,7 +336,7 @@ public class HiveParse {
         String sql24 = "update xxxx set a=1,b=2 where 1=1";
 //        String parsesql = Files.read("test.sql");
 
-        String sql25 = "select a `测试` from  test";
+        String sql25 = "elect a as test from  test";
         if (sql25.indexOf("`") >= 0) {
             sql25 = sql25.replaceAll("`[^`]*`", "");
         }

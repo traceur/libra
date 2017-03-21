@@ -14,7 +14,7 @@ public class HiveJdbcRun {
             Class.forName("org.apache.hive.jdbc.HiveDriver");
             //jdbc:hive2://172.16.10.254:10001/default
             //jdbc:hive2://10.3.149.15:10000/default
-            Connection conn = DriverManager.getConnection("jdbc:hive2://10.3.149.18:10000/default",
+            Connection conn = DriverManager.getConnection("jdbc:hive2://10.3.149.15:10000/default",
                     "hive", "hive");
             Statement stmt = conn.createStatement();
             //            showtables(stmt);
