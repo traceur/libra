@@ -16,5 +16,7 @@ public class StrByte {
         //// TODO: 2017/3/21
         String s=new String(b,"ascii");//第二个参数指定编码方式
         System.out.print(s);
+
+
     }
 }

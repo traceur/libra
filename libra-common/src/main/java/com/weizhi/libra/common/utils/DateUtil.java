@@ -18,7 +18,9 @@ import org.slf4j.LoggerFactory;
 public class DateUtil {
     private static final Logger LOG = LoggerFactory.getLogger(DateUtil.class);
 
-
+    public static void main(String[] args){
+//        Sting
+    }
     public static Date getNow() {
         return Calendar.getInstance().getTime();
     }
@@ -242,4 +244,6 @@ public class DateUtil {
         }
         return ret;
     }
+
+
 }
