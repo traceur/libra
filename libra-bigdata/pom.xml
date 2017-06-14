@@ -29,6 +29,16 @@
             <artifactId>nutz</artifactId>
             <version>1.r.54</version>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.7</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql-connector-java</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.22</version>
+        </dependency>
     </dependencies>
 
 </project>

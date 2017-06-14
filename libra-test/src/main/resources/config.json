@@ -1,0 +1,15 @@
+{
+  "BeforNDay": "hdfs://mzcluster/share/hive/hive-serde/DateUDF.jar",
+  "GetDateBoundary": "hdfs://mzcluster/share/hive/hive-serde/DateUDF.jar",
+  "odl_cpd": "hdfs://mzcluster/share/hive/hive-serde/hive-hcatalog-core-1.2.1.jar",
+  "csv_serde": "hdfs://mzcluster/share/hive/hive-serde/csv-serde-1.1.2-0.11.0-all.jar",
+  "hadoop1": "hdfs://mzcluster/share/hive/hive-serde/hadoop1.jar",
+  "hive_hcatalog_core_0_13_1": "hdfs://mzcluster/share/hive/hive-serde/hive-hcatalog-core-0.13.1.jar",
+  "json_serde": "hdfs://mzcluster/share/hive/hive-serde/json-serde-1.1.9.2.jar",
+  "lastpage": "hdfs://mzcluster/share/hive/hive-serde/lastpage.jar",
+  "odl_ssp_stream": "hdfs://mzcluster/share/hive/hive-serde/hive-hcatalog-core-1.2.1.jar",
+  "odl_hunter_search_result": "hdfs:///share/hive/hive-serde/hive-hcatalog-core-0.13.1.jar",
+  "odl_hunter_client_action": "hdfs:///share/hive/hive-serde/hive-hcatalog-core-0.13.1.jar",
+  "odl_fdt_reader_indivi_mq": "hdfs:///share/hive/hive-serde/hive-hcatalog-core-0.13.1.jar",
+  "odl_fdt_algo_article_mq": "hdfs:///share/hive/hive-serde/hive-hcatalog-core-0.13.1.ja"
+}
